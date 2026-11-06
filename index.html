@@ -109,7 +109,7 @@ footer{margin-top:3rem;background:var(--gd);color:#fff;text-align:center;padding
 </header>
 
 <nav id="nav">
-  <a href="#estado">Estado</a><a href="#galeria">Galería</a><a href="#cultivos">Cultivos</a><a href="#plantas">Plantas</a><a href="#plano">Plano</a><a href="#ruta">Ruta</a><a href="#cuidados">Cuidados</a><a href="#bitacora">Bitácora</a><a href="#plagas">Plagas</a><a href="#futuro">Próximos</a><a href="#redes">Redes</a>
+  <a href="#estado">Estado</a><a href="#galeria">Galería</a><a href="#cultivos">Cultivos</a><a href="#plantas">Plantas</a><a href="#plano">Plano</a><a href="#ruta">Ruta</a><a href="#cuidados">Cuidados</a><a href="#bitacora">Bitácora</a><a href="#plagas">Plagas</a><a href="#redes">Instagram</a><a href="#futuro">Próximos</a>
   <button id="tg" type="button" aria-label="Cambiar tema">🌓</button>
 </nav>
 
@@ -222,13 +222,25 @@ footer{margin-top:3rem;background:var(--gd);color:#fff;text-align:center;padding
   </div>
 </section>
 
+<!-- SECCIÓN DE INSTAGRAM / CÓDIGO QR -->
 <section id="redes" class="rv">
-  <div class="eyebrow">Comunidad</div>
-  <h2>Redes Sociales</h2>
-  <p class="lead">Síguenos y entérate de los avances de nuestra huerta escolar en redes sociales.</p>
-  <div class="card" style="text-align: center;">
-    <img src="4f1717d6-650e-4151-a935-3349e00acbb7.jpg" alt="Redes Sociales de la Huerta Escolar" style="max-width: 100%; border-radius: 12px; margin-bottom: 1rem;">
-    <p>¡Comparte el crecimiento de nuestras plantas y apoya el proyecto ambiental!</p>
+  <div class="eyebrow">Conéctate</div>
+  <h2>Síguenos en Instagram</h2>
+  <p class="lead">Escanea el código QR con la cámara de tu celular para visitar nuestro perfil oficial y ver más actualizaciones.</p>
+  
+  <div class="card" style="max-width: 380px; margin: 0 auto; text-align: center; padding: 2rem 1.5rem;">
+    <div style="font-size: 3rem; margin-bottom: 0.5rem;">📸</div>
+    <h3 style="margin-bottom: 1rem;">@HuertaEscolar</h3>
+    
+    <!-- Contenedor del Código QR con diseño elegante -->
+    <div style="background: #fff; padding: 12px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 1.2rem; border: 1px solid var(--ln);">
+      <img src="4f1717d6-650e-4151-a935-3349e00acbb7.jpg" alt="Código QR de Instagram de la Huerta Escolar" style="width: 200px; height: 200px; object-fit: contain; display: block; border-radius: 6px;">
+    </div>
+    
+    <p style="font-size: 0.9rem; color: var(--mu); margin-bottom: 1.2rem;">Apunta con la cámara de tu teléfono para abrir nuestro Instagram al instante.</p>
+    
+    <!-- Opcional: Reemplaza # con el enlace directo real de tu perfil de Instagram si lo deseas -->
+    <a href="https://instagram.com" target="_blank" class="btn sm">Abrir perfil web</a>
   </div>
 </section>
 
@@ -330,8 +342,7 @@ $("cl").onclick=function(){lg=[];ls("hz_log",lg);rl()};
 /* calculadora */
 var DI={zanahoria:[70,100],arveja:[90,120],aromaticas:[40,70]};$("cf").valueAsDate=new Date();
 $("cb").onclick=function(){var f=$("cf").value;if(!f){$("res").textContent="Elige una fecha de siembra.";return}var d=DI[$("cc").value],b=new Date(f+"T12:00:00");function s(n){var x=new Date(b);x.setDate(x.getDate()+n);return x.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"})}
-var pas=Math.max(0,Math.round((new Date()-b)/864e5));$("cp").style.width=Math.min(100,pas/d[1]*100)+"%
-;$("res").textContent="Cosecha estimada entre el "+s(d[0])+" y el "+s(d[1])+". Van "+pas+" días."};
+var pas=Math.max(0,Math.round((new Date()-b)/864e5));$("cp").style.width=Math.min(100,pas/d[1]*100)+"%";$("res").textContent="Cosecha estimada entre el "+s(d[0])+" y el "+s(d[1])+". Van "+pas+" días."};
 
 /* animaciones */
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
